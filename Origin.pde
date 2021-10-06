@@ -1,7 +1,14 @@
 PGraphics stars, planet;
 ArrayList<Particle> particles = new ArrayList<Particle>();
 float cX, cY, r;
-  
+
+void setup(){
+  size(700, 700, P2D);
+  noStroke();
+  createStars();
+  createPlanet();
+}
+
 void createStars(){
   stars = createGraphics(width, height); 
   stars.beginDraw();
@@ -38,13 +45,6 @@ void createPlanet(){
     }
   }
   planet.endDraw();
-}
-
-void setup(){
-  size(700, 700, P2D);
-  noStroke();
-  createStars();
-  createPlanet();
 }
 
 void draw(){
