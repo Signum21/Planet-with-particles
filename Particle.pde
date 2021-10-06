@@ -21,9 +21,6 @@ class Particle{
   }
   
   boolean isDead(float _r){
-    if(dist(pos.x, pos.y, width/2, height/2) < _r-size || life <= 0 || (abs(dir.x) < 1 && abs(dir.y) < 1)){
-      return true;
-    }
-    return false;
+    return dist(pos.x, pos.y, width/2, height/2) < _r-size || life <= 0 || (abs(dir.x) < 1 && abs(dir.y) < 1);
   }
 }
